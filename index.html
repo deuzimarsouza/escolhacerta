@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Achadinhos ML | Produtos em destaque</title>
+    <link rel="preconnect" href="https://http2.mlstatic.com" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar__inner">
+        <a class="brand" href="index.html" aria-label="Achadinhos ML">
+          <span class="brand__mark">ML</span>
+          <span class="brand__name">Achadinhos</span>
+        </a>
+
+        <form class="search" id="search-form" role="search">
+          <label class="sr-only" for="search-input">Buscar produtos</label>
+          <input id="search-input" type="search" placeholder="Buscar produtos, marcas e muito mais..." />
+          <button type="submit" aria-label="Buscar">
+            <span aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <nav class="top-links" aria-label="Links rapidos">
+          <a href="#produtos">Ofertas</a>
+          <a href="#produtos">Mais vendidos</a>
+          <a href="#produtos">Frete gratis</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="store-strip" aria-label="Categorias">
+        <button class="category is-active" type="button" data-category="todos">Todos</button>
+        <button class="category" type="button" data-category="celulares">Celulares</button>
+        <button class="category" type="button" data-category="informatica">Informatica</button>
+        <button class="category" type="button" data-category="audio">Audio</button>
+        <button class="category" type="button" data-category="acessorios">Acessorios</button>
+      </section>
+
+      <section class="products-section" id="produtos" aria-labelledby="products-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Vitrine</p>
+            <h1 id="products-title">Produtos em destaque</h1>
+          </div>
+          <span id="product-count" class="count"></span>
+        </div>
+
+        <div class="products-grid" id="products-grid"></div>
+        <p class="empty-state" id="empty-state" hidden>Nenhum produto encontrado.</p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Pagina de afiliados independente. Os cards direcionam para anuncios no Mercado Livre.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
