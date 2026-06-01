@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Escolha Certa reúne produtos afiliados com descrição clara, filtros, favoritos e links de oferta."
+    />
+    <meta name="theme-color" content="#ffdb05" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Escolha Certa" />
+    <title>Escolha Certa | Produtos afiliados selecionados</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" type="image/png" href="assets/icon-192.png" />
+    <link rel="apple-touch-icon" href="assets/icon-192.png" />
+    <link rel="stylesheet" href="styles.css?v=20260601-5" />
+    <script
+      src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"
+      defer
+    ></script>
+    <script src="product.js?v=20260601-5" defer></script>
+    <script src="script.js?v=20260601-5" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="Escolha Certa - início">
+        <img src="assets/logo-escolha-certa.png" alt="" />
+        <span>Escolha Certa</span>
+      </a>
+
+      <button
+        class="icon-button menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Abrir menu"
+        aria-controls="siteNav"
+        aria-expanded="false"
+      >
+        <i data-lucide="menu"></i>
+      </button>
+
+      <nav class="site-nav" id="siteNav" aria-label="Navegação principal">
+        <a href="#produtos">Produtos</a>
+        <a href="#guias">Guias</a>
+        <a href="#contato">Contato</a>
+        <button
+          class="icon-button notification-button"
+          id="notifyButton"
+          type="button"
+          aria-label="Ativar alertas de novos produtos"
+          aria-pressed="false"
+        >
+          <i data-lucide="bell"></i>
+        </button>
+      </nav>
+    </header>
+
+    <main id="inicio">
+      <section class="hero" aria-labelledby="heroTitle">
+        <div class="hero-copy">
+          <p class="eyebrow">guias e ofertas para você</p>
+          <h1 id="heroTitle">Selecionados para comprar melhor.</h1>
+          <p>
+            Produtos com descrição direta, preço comparado e atalhos para salvar,
+            compartilhar ou falar antes de comprar.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#produtos">
+              <i data-lucide="shopping-bag"></i>
+              Ver produtos
+            </a>
+            <a
+              class="button button-secondary"
+              href="https://wa.me/5585996402960?text=Olá!%20Vim%20pelo%20blog%20Escolha%20Certa."
+              target="_blank"
+              rel="noopener"
+            >
+              <i data-lucide="message-circle"></i>
+              Tirar dúvida
+            </a>
+          </div>
+          <dl class="hero-stats" aria-label="Resumo da vitrine">
+            <div>
+              <dt>2</dt>
+              <dd>produtos ativos</dd>
+            </div>
+            <div>
+              <dt>29%</dt>
+              <dd>desconto em destaque</dd>
+            </div>
+            <div>
+              <dt>R$ 150</dt>
+              <dd>de economia</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="filters-section" id="produtos" aria-labelledby="productsTitle">
+        <div class="section-heading products-heading">
+          <p class="eyebrow">vitrine afiliado</p>
+          <div>
+            <h2 id="productsTitle">Produtos em destaque</h2>
+            <p class="section-intro">
+              Compare preço, desconto e benefícios antes de abrir a oferta.
+            </p>
+          </div>
+        </div>
+
+        <div class="toolbar" aria-label="Filtros de produtos">
+          <label class="search-box" for="searchInput">
+            <i data-lucide="search"></i>
+            <input
+              id="searchInput"
+              type="search"
+              placeholder="Buscar produto, categoria, ID ou benefício"
+              autocomplete="off"
+            />
+          </label>
+
+          <label class="sort-box" for="sortSelect">
+            <span>Ordenar</span>
+            <select id="sortSelect">
+              <option value="discount">Maior desconto</option>
+              <option value="price">Menor preço</option>
+              <option value="recent">Mais recente</option>
+              <option value="name">Nome A-Z</option>
+            </select>
+          </label>
+
+          <label class="category-box" for="categorySelect">
+            <span>Categoria</span>
+            <select id="categorySelect"></select>
+          </label>
+
+          <button class="button button-secondary clear-filters-button" id="clearFiltersButton" type="button" disabled>
+            <i data-lucide="rotate-ccw"></i>
+            Limpar
+          </button>
+        </div>
+
+        <div class="results-line">
+          <span id="resultsCount">0 produtos encontrados</span>
+          <span id="activeFilters" class="active-filters"></span>
+        </div>
+
+        <div class="product-grid" id="productGrid"></div>
+      </section>
+
+      <section class="guides-section" id="guias" aria-labelledby="guidesTitle">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">conteúdo editorial</p>
+            <h2 id="guidesTitle">Guias para decidir melhor</h2>
+          </div>
+        </div>
+
+        <div class="guide-grid">
+          <article class="guide-card">
+            <span>Áudio</span>
+            <h3>Como escolher uma interface de áudio para lives e chamadas</h3>
+            <p>
+              Confira conexões, alimentação, efeitos de voz e compatibilidade
+              antes de fechar a compra.
+            </p>
+            <a href="pages/interface-audio-lives-chamadas.html">Ler artigo</a>
+          </article>
+          <article class="guide-card">
+            <span>Setup</span>
+            <h3>USB-C, XLR e P2: o que muda no seu equipamento</h3>
+            <p>
+              Entenda quais entradas fazem sentido para microfone, fone e mesa
+              compacta no dia a dia.
+            </p>
+            <a href="pages/usb-c-xlr-p2.html">Ler artigo</a>
+          </article>
+          <article class="guide-card">
+            <span>Criação</span>
+            <h3>Recursos que ajudam em gravações sem complicar o setup</h3>
+            <p>
+              Reverb, delay, pitch e controles físicos podem economizar tempo
+              em transmissão, aula e conteúdo curto.
+            </p>
+            <a href="pages/recursos-gravacoes.html">Ler artigo</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contato" aria-labelledby="contactTitle">
+        <div>
+          <p class="eyebrow">fale com a escolha certa</p>
+          <h2 id="contactTitle">Quer divulgar um produto ou tirar uma dúvida?</h2>
+          <p>
+            Entre em contato para sugestões de produtos, parcerias, dúvidas
+            sobre ofertas ou ajustes nos links afiliados do blog.
+          </p>
+        </div>
+
+        <div class="contact-actions" aria-label="Canais de contato">
+          <a
+            class="contact-card"
+            href="https://wa.me/5585996402960?text=Olá!%20Vim%20pelo%20blog%20Escolha%20Certa."
+            target="_blank"
+            rel="noopener"
+          >
+            <i data-lucide="message-circle"></i>
+            <span>WhatsApp</span>
+            <strong>+55 (85) 99640-2960</strong>
+          </a>
+          <a class="contact-card" href="mailto:contato@escolhacerta.com.br">
+            <i data-lucide="mail"></i>
+            <span>E-mail</span>
+            <strong>contato@escolhacerta.com.br</strong>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Escolha Certa</strong>
+        <p>
+          Como afiliados, podemos receber comissão por compras feitas pelos
+          links, sem custo adicional para você.
+        </p>
+      </div>
+      <a href="#inicio">Voltar ao topo</a>
+    </footer>
+
+    <dialog class="product-dialog" id="productDialog" aria-labelledby="dialogTitle">
+      <button class="icon-button dialog-close" id="dialogClose" type="button" aria-label="Fechar">
+        <i data-lucide="x"></i>
+      </button>
+      <div id="dialogContent"></div>
+    </dialog>
+
+    <div
+      class="notification-prompt"
+      id="notificationPrompt"
+      role="dialog"
+      aria-labelledby="notificationPromptTitle"
+      hidden
+    >
+      <div>
+        <strong id="notificationPromptTitle">Receber novidades?</strong>
+        <p>Autorize alertas para saber quando novos produtos entrarem na vitrine.</p>
+      </div>
+      <div class="notification-prompt-actions">
+        <button class="button button-primary" id="notificationPromptAllow" type="button">
+          <i data-lucide="bell-ring"></i>
+          Permitir
+        </button>
+        <button class="icon-button" id="notificationPromptClose" type="button" aria-label="Agora não">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

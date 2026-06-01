@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Guia para escolher uma interface de áudio compacta para lives, chamadas, jogos e gravações."
+    />
+    <meta name="theme-color" content="#ffdb05" />
+    <title>Interface de áudio para lives e chamadas | Escolha Certa</title>
+    <link rel="manifest" href="../manifest.webmanifest" />
+    <link rel="icon" type="image/png" href="../assets/icon-192.png" />
+    <link rel="apple-touch-icon" href="../assets/icon-192.png" />
+    <link rel="stylesheet" href="../styles.css?v=20260601-5" />
+    <script
+      src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html#inicio" aria-label="Escolha Certa - início">
+        <img src="../assets/logo-escolha-certa.png" alt="" />
+        <span>Escolha Certa</span>
+      </a>
+
+      <button
+        class="icon-button menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Abrir menu"
+        aria-controls="siteNav"
+        aria-expanded="false"
+      >
+        <i data-lucide="menu"></i>
+      </button>
+
+      <nav class="site-nav" id="siteNav" aria-label="Navegação principal">
+        <a href="../index.html#produtos">Produtos</a>
+        <a href="../index.html#guias">Guias</a>
+        <a href="../index.html#contato">Contato</a>
+      </nav>
+    </header>
+
+    <main class="article-main">
+      <section class="article-hero" aria-labelledby="articleTitle">
+        <div>
+          <p class="eyebrow">guia de áudio</p>
+          <h1 id="articleTitle">Como escolher uma interface de áudio para lives e chamadas</h1>
+          <p>
+            Uma interface compacta pode melhorar a voz, organizar entradas e
+            reduzir improvisos no setup. O ponto é escolher recursos que você
+            realmente vai usar.
+          </p>
+          <div class="article-hero-actions">
+            <a class="button button-primary" href="../index.html#produtos">
+              <i data-lucide="shopping-bag"></i>
+              Ver produtos
+            </a>
+            <a class="button button-secondary" href="../index.html#guias">
+              <i data-lucide="arrow-left"></i>
+              Voltar aos guias
+            </a>
+          </div>
+        </div>
+        <figure class="article-media">
+          <img src="../src/fifine_sc3/fifinesc3_01.jpg" alt="Interface de áudio Fifine SC3 preta" />
+        </figure>
+      </section>
+
+      <article class="article-content">
+        <h2>O que observar primeiro</h2>
+        <p>
+          Antes de olhar efeitos e luzes, confira se a interface conversa bem
+          com o que você já tem. Para chamadas, aulas, lives e jogos, uma boa
+          escolha precisa simplificar o controle de voz, fone e microfone sem
+          exigir mesa grande ou instalação complicada.
+        </p>
+
+        <h2>Conexões importam</h2>
+        <p>
+          Entradas USB-C, XLR e P2/Jack cobrem a maior parte dos setups
+          simples. USB-C facilita o uso no computador, XLR abre espaço para
+          microfones mais completos e P2/Jack ajuda com fones e acessórios que
+          muita gente já tem em casa.
+        </p>
+
+        <h2>Controle físico ajuda no dia a dia</h2>
+        <p>
+          Botões e knobs dedicados evitam ficar procurando volume em software
+          no meio de uma chamada ou transmissão. Se você alterna entre jogo,
+          reunião e gravação, controles visíveis tornam a rotina mais rápida.
+        </p>
+
+        <p class="article-note">
+          Para uso casual ou semiprofissional, priorize compatibilidade,
+          controle de volume e clareza da voz antes de buscar efeitos extras.
+        </p>
+
+        <h2>Quando os efeitos fazem sentido</h2>
+        <p>
+          Reverb, delay, pitch e chorus são úteis para criação de conteúdo,
+          lives descontraídas e testes de voz. Se o objetivo é reunião ou aula,
+          eles devem ser um bônus, não o principal motivo da compra.
+        </p>
+
+        <div class="article-next">
+          <a class="button button-primary" href="../index.html#produtos">Ver ofertas</a>
+          <a class="button button-secondary" href="usb-c-xlr-p2.html">Próximo guia</a>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Escolha Certa</strong>
+        <p>Guias práticos para comparar produtos antes de abrir a oferta.</p>
+      </div>
+      <a href="../index.html#guias">Voltar aos guias</a>
+    </footer>
+
+    <script>
+      window.addEventListener("load", () => {
+        window.lucide?.createIcons();
+      });
+
+      const menuToggle = document.querySelector("#menuToggle");
+      const siteNav = document.querySelector("#siteNav");
+
+      menuToggle?.addEventListener("click", () => {
+        const isOpen = siteNav.classList.toggle("is-open");
+        menuToggle.setAttribute("aria-expanded", isOpen.toString());
+        menuToggle.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
+        menuToggle.innerHTML = `<i data-lucide="${isOpen ? "x" : "menu"}"></i>`;
+        window.lucide?.createIcons();
+      });
+
+      siteNav?.addEventListener("click", (event) => {
+        if (!event.target.closest("a")) return;
+        siteNav.classList.remove("is-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Abrir menu");
+        menuToggle.innerHTML = '<i data-lucide="menu"></i>';
+        window.lucide?.createIcons();
+      });
+    </script>
+  </body>
+</html>

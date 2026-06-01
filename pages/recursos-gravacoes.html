@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Veja quais recursos de uma interface de áudio ajudam em gravações, lives e criação de conteúdo."
+    />
+    <meta name="theme-color" content="#ffdb05" />
+    <title>Recursos para gravações e criação | Escolha Certa</title>
+    <link rel="manifest" href="../manifest.webmanifest" />
+    <link rel="icon" type="image/png" href="../assets/icon-192.png" />
+    <link rel="apple-touch-icon" href="../assets/icon-192.png" />
+    <link rel="stylesheet" href="../styles.css?v=20260601-5" />
+    <script
+      src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html#inicio" aria-label="Escolha Certa - início">
+        <img src="../assets/logo-escolha-certa.png" alt="" />
+        <span>Escolha Certa</span>
+      </a>
+
+      <button
+        class="icon-button menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Abrir menu"
+        aria-controls="siteNav"
+        aria-expanded="false"
+      >
+        <i data-lucide="menu"></i>
+      </button>
+
+      <nav class="site-nav" id="siteNav" aria-label="Navegação principal">
+        <a href="../index.html#produtos">Produtos</a>
+        <a href="../index.html#guias">Guias</a>
+        <a href="../index.html#contato">Contato</a>
+      </nav>
+    </header>
+
+    <main class="article-main">
+      <section class="article-hero" aria-labelledby="articleTitle">
+        <div>
+          <p class="eyebrow">guia de criação</p>
+          <h1 id="articleTitle">Recursos que ajudam em gravações sem complicar o setup</h1>
+          <p>
+            Recursos extras podem deixar a produção mais rápida, mas só valem a
+            pena quando ajudam a gravar, ajustar ou transmitir com menos atrito.
+          </p>
+          <div class="article-hero-actions">
+            <a class="button button-primary" href="../index.html#produtos">
+              <i data-lucide="shopping-bag"></i>
+              Ver produtos
+            </a>
+            <a class="button button-secondary" href="../index.html#guias">
+              <i data-lucide="arrow-left"></i>
+              Voltar aos guias
+            </a>
+          </div>
+        </div>
+        <figure class="article-media">
+          <img src="../src/fifine_sc3/fifinesc3_01.jpg" alt="Mesa compacta de áudio para criação de conteúdo" />
+        </figure>
+      </section>
+
+      <article class="article-content">
+        <h2>Equalizador para acertar a voz</h2>
+        <p>
+          O equalizador ajuda a ajustar graves, médios e agudos da voz. Para
+          criadores, isso pode tornar o áudio mais limpo sem depender de muitos
+          filtros no computador.
+        </p>
+
+        <h2>Efeitos com moderação</h2>
+        <p>
+          Reverb, delay, pitch e chorus podem ser divertidos em lives e vídeos,
+          mas devem ser fáceis de ligar e desligar. Em chamadas profissionais,
+          a melhor configuração quase sempre é a mais discreta.
+        </p>
+
+        <h2>Alimentação fantasma</h2>
+        <p>
+          A alimentação fantasma é útil para microfones compatíveis que precisam
+          de energia extra. Se você pretende usar microfone XLR condensador,
+          esse recurso pode ser decisivo.
+        </p>
+
+        <p class="article-note">
+          Bons recursos são aqueles que reduzem passos. Se um efeito ou controle
+          exige muito ajuste toda vez, provavelmente vai atrapalhar mais do que ajudar.
+        </p>
+
+        <h2>Resumo prático</h2>
+        <p>
+          Para gravar melhor, procure controles físicos, conexão estável,
+          monitoramento confortável no fone e recursos de voz que você consiga
+          ajustar rapidamente durante a rotina.
+        </p>
+
+        <div class="article-next">
+          <a class="button button-primary" href="../index.html#produtos">Ver ofertas</a>
+          <a class="button button-secondary" href="interface-audio-lives-chamadas.html">Primeiro guia</a>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Escolha Certa</strong>
+        <p>Guias práticos para comparar produtos antes de abrir a oferta.</p>
+      </div>
+      <a href="../index.html#guias">Voltar aos guias</a>
+    </footer>
+
+    <script>
+      window.addEventListener("load", () => {
+        window.lucide?.createIcons();
+      });
+
+      const menuToggle = document.querySelector("#menuToggle");
+      const siteNav = document.querySelector("#siteNav");
+
+      menuToggle?.addEventListener("click", () => {
+        const isOpen = siteNav.classList.toggle("is-open");
+        menuToggle.setAttribute("aria-expanded", isOpen.toString());
+        menuToggle.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
+        menuToggle.innerHTML = `<i data-lucide="${isOpen ? "x" : "menu"}"></i>`;
+        window.lucide?.createIcons();
+      });
+
+      siteNav?.addEventListener("click", (event) => {
+        if (!event.target.closest("a")) return;
+        siteNav.classList.remove("is-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Abrir menu");
+        menuToggle.innerHTML = '<i data-lucide="menu"></i>';
+        window.lucide?.createIcons();
+      });
+    </script>
+  </body>
+</html>

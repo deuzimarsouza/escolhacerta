@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Entenda diferenças entre conexões USB-C, XLR e P2/Jack em interfaces de áudio compactas."
+    />
+    <meta name="theme-color" content="#ffdb05" />
+    <title>USB-C, XLR e P2 em áudio | Escolha Certa</title>
+    <link rel="manifest" href="../manifest.webmanifest" />
+    <link rel="icon" type="image/png" href="../assets/icon-192.png" />
+    <link rel="apple-touch-icon" href="../assets/icon-192.png" />
+    <link rel="stylesheet" href="../styles.css?v=20260601-5" />
+    <script
+      src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html#inicio" aria-label="Escolha Certa - início">
+        <img src="../assets/logo-escolha-certa.png" alt="" />
+        <span>Escolha Certa</span>
+      </a>
+
+      <button
+        class="icon-button menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Abrir menu"
+        aria-controls="siteNav"
+        aria-expanded="false"
+      >
+        <i data-lucide="menu"></i>
+      </button>
+
+      <nav class="site-nav" id="siteNav" aria-label="Navegação principal">
+        <a href="../index.html#produtos">Produtos</a>
+        <a href="../index.html#guias">Guias</a>
+        <a href="../index.html#contato">Contato</a>
+      </nav>
+    </header>
+
+    <main class="article-main">
+      <section class="article-hero" aria-labelledby="articleTitle">
+        <div>
+          <p class="eyebrow">guia de setup</p>
+          <h1 id="articleTitle">USB-C, XLR e P2: o que muda no seu equipamento</h1>
+          <p>
+            Cada conexão resolve uma parte do setup. Entender a função de cada
+            entrada evita comprar um produto que parece completo, mas não serve
+            para o microfone ou fone que você usa.
+          </p>
+          <div class="article-hero-actions">
+            <a class="button button-primary" href="../index.html#produtos">
+              <i data-lucide="shopping-bag"></i>
+              Ver produtos
+            </a>
+            <a class="button button-secondary" href="../index.html#guias">
+              <i data-lucide="arrow-left"></i>
+              Voltar aos guias
+            </a>
+          </div>
+        </div>
+        <figure class="article-media">
+          <img src="../src/fifine_sc3/fifinesc3_02.jpg" alt="Interface de áudio Fifine SC3 branca" />
+        </figure>
+      </section>
+
+      <article class="article-content">
+        <h2>USB-C: praticidade e alimentação</h2>
+        <p>
+          USB-C costuma ser a conexão mais simples para ligar a interface ao
+          computador. Em setups compactos, ela também pode alimentar o aparelho,
+          reduzindo a quantidade de cabos sobre a mesa.
+        </p>
+
+        <h2>XLR: caminho para microfones melhores</h2>
+        <p>
+          XLR é comum em microfones de áudio mais robustos. Se você pretende
+          evoluir a qualidade da voz, vale escolher uma interface que já tenha
+          essa entrada, especialmente quando ela oferece alimentação fantasma
+          para microfones compatíveis.
+        </p>
+
+        <h2>P2/Jack: útil para fones e acessórios</h2>
+        <p>
+          P2/Jack continua relevante porque muitos fones, cabos e acessórios
+          usam esse padrão. Para quem já tem equipamentos em casa, essa conexão
+          aumenta a chance de reaproveitar o que já funciona.
+        </p>
+
+        <p class="article-note">
+          A melhor interface não é a que tem mais portas, e sim a que atende os
+          equipamentos que você usa hoje e os upgrades que fazem sentido depois.
+        </p>
+
+        <h2>Como decidir</h2>
+        <p>
+          Se você quer algo rápido para computador, priorize USB-C. Se pretende
+          usar microfone dedicado, procure XLR. Se usa fone comum ou acessórios
+          simples, confira P2/Jack antes de comprar.
+        </p>
+
+        <div class="article-next">
+          <a class="button button-primary" href="../index.html#produtos">Ver ofertas</a>
+          <a class="button button-secondary" href="recursos-gravacoes.html">Próximo guia</a>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Escolha Certa</strong>
+        <p>Guias práticos para comparar produtos antes de abrir a oferta.</p>
+      </div>
+      <a href="../index.html#guias">Voltar aos guias</a>
+    </footer>
+
+    <script>
+      window.addEventListener("load", () => {
+        window.lucide?.createIcons();
+      });
+
+      const menuToggle = document.querySelector("#menuToggle");
+      const siteNav = document.querySelector("#siteNav");
+
+      menuToggle?.addEventListener("click", () => {
+        const isOpen = siteNav.classList.toggle("is-open");
+        menuToggle.setAttribute("aria-expanded", isOpen.toString());
+        menuToggle.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
+        menuToggle.innerHTML = `<i data-lucide="${isOpen ? "x" : "menu"}"></i>`;
+        window.lucide?.createIcons();
+      });
+
+      siteNav?.addEventListener("click", (event) => {
+        if (!event.target.closest("a")) return;
+        siteNav.classList.remove("is-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Abrir menu");
+        menuToggle.innerHTML = '<i data-lucide="menu"></i>';
+        window.lucide?.createIcons();
+      });
+    </script>
+  </body>
+</html>
