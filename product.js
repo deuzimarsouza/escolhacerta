@@ -13,7 +13,18 @@ window.ESCOLHA_CERTA_PRODUCTS = [
     link: "https://meli.la/1P6Zb4v",
     excerpt:
       "Teclado mecânico AULA F75 Glacial Blue com layout compacto de 75% e 80 teclas. Conta com conexão Bluetooth, 2.4GHz e USB-C, ideal para jogos e produtividade. Possui RGB personalizável, switches hot-swap e digitação silenciosa com 5 camadas internas. Bateria de 4000mAh, baixa latência e keycaps PBT para mais durabilidade e desempenho.",
-  },
+    highlights: [
+      "Conexões USB-C, XLR e P2/Jack",
+      "Efeitos de voz com reverb, delay, pitch e chorus",
+      "Alimentação fantasma para microfones compatíveis",
+    ],
+    specs: [
+      { label: "Canais", value: "4 canais" },
+      { label: "Conexão", value: "USB-C, XLR e P2/Jack" },
+      { label: "Uso indicado", value: "Lives, jogos, chamadas e gravações" },
+      { label: "Recursos", value: "EQ, efeitos e phantom power" },
+    ],
+    },
   {
     searchId: "Aula-F75-Preto",
     id: "65C9VX-9UQ2",
@@ -28,6 +39,17 @@ window.ESCOLHA_CERTA_PRODUCTS = [
     link: "https://meli.la/1b5iMmN",
     excerpt:
       "Teclado mecânico AULA F75 Leobog Axys Graywood v3 com layout compacto de 75% e 80 teclas. Conta com conexão Bluetooth, 2.4GHz e USB-C, ideal para jogos e produtividade. Possui RGB personalizável, switches hot-swap e digitação silenciosa com 5 camadas internas. Bateria de 4000mAh, baixa latência e keycaps PBT para mais durabilidade e desempenho.",
+    highlights: [
+      "Conexões USB-C, XLR e P2/Jack",
+      "Efeitos de voz com reverb, delay, pitch e chorus",
+      "Alimentação fantasma para microfones compatíveis",
+    ],
+    specs: [
+      { label: "Canais", value: "4 canais" },
+      { label: "Conexão", value: "USB-C, XLR e P2/Jack" },
+      { label: "Uso indicado", value: "Lives, jogos, chamadas e gravações" },
+      { label: "Recursos", value: "EQ, efeitos e phantom power" },
+    ],
   },
   {
     searchId: "Fifine-SC3-Preto",
