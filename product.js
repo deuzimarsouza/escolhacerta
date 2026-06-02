@@ -1,4 +1,34 @@
 window.ESCOLHA_CERTA_PRODUCTS = [
+    {
+    searchId: "Aula-F75-Branco",
+    id: "65C9VX-QHHH",
+    title: "Teclado mecânico Aula F75 75% - Glacial Blue ",
+    category: "Tecnologia",
+    badge: "Teclado Mecanico Gamer",
+    price: 380.90,
+    oldPrice: 499.9,
+    date: "2026-06-02",
+    store: "Mercado Livre",
+    image: "src/aula_f75/aula_f75_branco.jpg",
+    link: "https://meli.la/1P6Zb4v",
+    excerpt:
+      "Teclado mecânico AULA F75 Glacial Blue com layout compacto de 75% e 80 teclas. Conta com conexão Bluetooth, 2.4GHz e USB-C, ideal para jogos e produtividade. Possui RGB personalizável, switches hot-swap e digitação silenciosa com 5 camadas internas. Bateria de 4000mAh, baixa latência e keycaps PBT para mais durabilidade e desempenho.",
+  },
+  {
+    searchId: "Aula-F75-Preto",
+    id: "65C9VX-9UQ2",
+    title: "Teclado mecânico Aula F75 75% - Leobog Axys Graywood v3 ",
+    category: "Tecnologia",
+    badge: "Teclado Mecanico Gamer",
+    price: 355.90,
+    oldPrice: 399.9,
+    date: "2026-06-02",
+    store: "Mercado Livre",
+    image: "src/aula_f75/aula_f75_preto.jpg",
+    link: "https://meli.la/1b5iMmN",
+    excerpt:
+      "Teclado mecânico AULA F75 Leobog Axys Graywood v3 com layout compacto de 75% e 80 teclas. Conta com conexão Bluetooth, 2.4GHz e USB-C, ideal para jogos e produtividade. Possui RGB personalizável, switches hot-swap e digitação silenciosa com 5 camadas internas. Bateria de 4000mAh, baixa latência e keycaps PBT para mais durabilidade e desempenho.",
+  },
   {
     searchId: "Fifine-SC3-Preto",
     id: "65C9VX-E1LB",
