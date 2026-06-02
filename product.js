@@ -2,7 +2,7 @@ window.ESCOLHA_CERTA_PRODUCTS = [
     {
     searchId: "Aula-F75-Branco",
     id: "65C9VX-QHHH",
-    title: "Teclado mecânico Aula F75 75% - Glacial Blue ",
+    title: "Teclado mecânico Aula F75 75% - Glacial Blue",
     category: "Tecnologia",
     badge: "Teclado Mecanico Gamer",
     price: 380.90,
@@ -28,7 +28,7 @@ window.ESCOLHA_CERTA_PRODUCTS = [
   {
     searchId: "Aula-F75-Preto",
     id: "65C9VX-9UQ2",
-    title: "Teclado mecânico Aula F75 75% - Leobog Axys Graywood v3 ",
+    title: "Teclado mecânico Aula F75 75% - Leobog Axys Graywood v3",
     category: "Tecnologia",
     badge: "Teclado Mecanico Gamer",
     price: 355.90,
@@ -103,5 +103,4 @@ window.ESCOLHA_CERTA_PRODUCTS = [
       { label: "Recursos", value: "EQ, efeitos e phantom power" },
     ],
   },
-
 ];
